@@ -14,12 +14,15 @@
     margin: 0px;
     padding: 0px;
     font-family: var(--default-font);
-    color: white;
+    color: var(--white-ish);
 }
 
 html, body {
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
+    overflow: hidden;
+    font-size: 100%;
+    margin: auto;
 }
 
 body {
@@ -32,18 +35,19 @@ body {
 main {
     display: flex;
     width: 85%;
-    height: 85%;
+    height: 75%;
 }
 
 form {
     width: 100%;
     height: 100%;
+    border-radius: 34px;
 }
 
 div#container-top-left {
     background-color: var(--white-ish);
     width: 100%;
-    height: 30%;
+    height: 25%;
     border-radius: 34px 34px 0px 0px;
     display: flex;
     align-items: center;
@@ -51,7 +55,7 @@ div#container-top-left {
 }
 
 div#container-top-left > div#logo-container {
-    width: 70%;
+    width: 55%;
     display: flex;
     justify-content: center;
 }
@@ -65,12 +69,12 @@ div#container-top-left > div#logo-container > img {
 fieldset#container-bottom-right {
     background-color: var(--black-ish);
     width: 100%;
-    height: 70%;
+    height: 75%;
     border-radius: 0px 0px 34px 34px;
     border: 2px solid var(--white-ish);
     box-sizing: border-box;
     display: flex; 
-    flex-flow: column;  
+    flex-direction: column; 
 }
 
 div#container-top-left > img {
@@ -82,26 +86,46 @@ div#message-container {
     width: 100%;
     height: 30%;
     display: flex;
-    flex-flow: column;
-    gap: 5px;
+    flex-direction: column;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
 }
 
-div#input-container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-    height: 25%;
+div#message-container > h1#welcome {
+    font-size: 2rem;
 }
 
-div#user-container {
+div#message-container > p#login-message {
+    font-size: 1rem;
+}
+
+div#input-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 35%;
+    gap: 2rem;
+}
+
+div#user-container, div#pw-container {
+    display: flex;
     width: 80%;
-    height: 60%;  
+    height: 35%;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 200,
+    'opsz' 24
 }
 
 span.material-symbols-outlined#person, span.material-symbols-outlined#key {
@@ -111,28 +135,15 @@ span.material-symbols-outlined#person, span.material-symbols-outlined#key {
     padding-left: 0.5rem;
 }
 
-input#username {
+input#username, input#password {
     width: 100%;
-    height: 60%;
+    height: 100%;
     color: var(--black-ish);
     font-size: 1rem;
-    padding-left: 3rem;
-}
-
-
-div#pw-container {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 60%;  
-}
-
-input#password {
-    width: 100%;
-    height: 60%;
-    color: var(--black-ish);
-    font-size: 1rem;
-    padding-left: 3rem;
+    text-indent: 3rem;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
 }
 
 input#username::placeholder, input#password::placeholder {
@@ -142,14 +153,56 @@ input#username::placeholder, input#password::placeholder {
 }
 
 div#actions-container {
-    /* background-color: yellow; */
     width: 100%;
-    height: 45%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 1.6rem;
+    gap: 1rem;
 }
 
-
-
-
-fieldset {
+div#actions-container > button {
+    background-color: var(--bg-color);
     border: none;
+    width: 80%;
+    height: 40%;
+    font-weight: 700;
+    font-size: 1.5rem; 
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
 }
+
+div#actions-container > button:active {
+    transform: translateY(2px);
+}
+
+div#actions-container > button:hover {
+    transition: background-color 0.3s;
+    background-color: hsl(191, 54%, 46%);
+}
+
+form {
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+input#username, input#password, div#actions-container > button {
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+input#username:focus, input#password:focus{
+    outline: none;
+}
+
+div#actions-container > a#forgot {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
