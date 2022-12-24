@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* MOBILE LANDSCAPE */
+@media screen and (min-width: 568px) and (orientation: landscape) { 
+
+    html, body  {
+        width: 100vw;
+        height: 100vh;
+        font-size: 60%;
+    }  
+    
+    main {
+        width: 40%;
+        height: 80%;
+    }
+
+    div#container-top-left > div#logo-container > img {
+        min-width: 0px;
+        width: 75%;
+    }
+
+    div#message-container {
+        gap: 0rem;
+    }
+}
+
+/* TABLET PORTRAIT */
+@media screen and (min-width: 768px) and (orientation: portrait)  { 
+    html, body  {
+        font-size: 100%;
+    }  
+    main {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+/* TABLET LANDSCAPE */
+@media screen and (min-width: 992px) and (orientation: landscape) { 
+
+    html, body  {
+        width: 100vw;
+        height: 100vh;
+        font-size: 90%;
+    }
+
+    body {
+        background-image: url(../images/bg-992px.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: soft-light;
+    }
+
+    main {
+        width: 60%;
+        height: 45%;
+    }
+
+    form {
+        display: flex;
+    }
+
+    div#container-top-left {
+        width: 50%;
+        height:100%;
+        border-radius: 34px 0px 0px 34px;
+    }
+
+    div#container-top-left > div#logo-container {
+        width: 80%;
+    }
+
+    div#container-top-left > div#logo-container > img {
+        width: 100%;
+        height: 100%;
+        max-width: max-content;
+    }
+
+    fieldset#container-bottom-right {
+        width: 50%;
+        height:100%;
+        border-radius: 0px 34px 34px 0px;
+    }
+}
+
+/* LAPTOP & DESKTOP */
+@media screen and (min-width: 1200px) and (orientation: landscape) { 
+
+    html, body  {
+        width: 100vw;
+        height: 100vh;
+        font-size: 95%;
+    }
+
+    body {
+        background-image: url(../images/bg-1200px.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: soft-light;
+    }
+    
+    main {
+        width: 50%;
+        height: 40%;
+    }
+
+    form {
+        display: flex;
+    }
+
+    div#container-top-left {
+        width: 50%;
+        height:100%;
+        border-radius: 34px 0px 0px 34px;
+    }
+
+    div#container-top-left > div#logo-container {
+        width: 80%;
+    }
+
+    div#container-top-left > div#logo-container > img {
+        width: 100%;
+        height: 100%;
+        max-width: max-content;
+    }
+
+    fieldset#container-bottom-right {
+        width: 50%;
+        height:100%;
+        border-radius: 0px 34px 34px 0px;
+    }
+}
+
