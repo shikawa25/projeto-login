@@ -10,17 +10,35 @@
     }  
     
     main {
-        width: 40%;
-        height: 80%;
+        width: 70%;
+        height: 60%;
+    }
+
+
+    form {
+        display: flex;
+    }
+
+    div#container-top-left {
+        width: 50%;
+        height:100%;
+        border-radius: 34px 0px 0px 34px;
+    }
+
+    div#container-top-left > div#logo-container {
+        width: 80%;
     }
 
     div#container-top-left > div#logo-container > img {
-        min-width: 0px;
-        width: 75%;
+        width: 100%;
+        height: 100%;
+        max-width: max-content;
     }
 
-    div#message-container {
-        gap: 0rem;
+    fieldset#container-bottom-right {
+        width: 50%;
+        height:100%;
+        border-radius: 0px 34px 34px 0px;
     }
 }
 
